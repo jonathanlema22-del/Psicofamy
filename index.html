@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSICOFAMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #E0F2F7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor principal para el fondo gris */
+        .contenido-principal {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 40px 20px;
+            max-width: 1200px; /* Nuevo valor para que ocupe más espacio */
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            max-width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para el párrafo de la misión */
+        .mision-parrafo {
+            font-size: 1.2em;
+            text-align: justify;
+            margin: 0 auto 30px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* Estilos para el grid de servicios (CORREGIDO) */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Esto creará 3 columnas de igual ancho */
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .servicio-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        .servicio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .servicio-item h3 {
+            padding: 15px;
+            font-size: 1.1em;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Estilo para la descripción oculta */
+        .descripcion-servicio {
+            display: none;
+            padding: 0 15px 15px;
+        }
+        .descripcion-servicio.visible {
+            display: block;
+        }
+
+        /* Estilo para el párrafo de la cita */
+        .cita {
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido-principal">
+        <header>
+            <img src="log.png" alt="Logo de PSICOFAMI" class="logo">
+        </header>
+
+        <p class="mision-parrafo">
+            Somos Psicofamy, un centro de terapias dedicado a la salud mental de toda la familia. 
+            Creemos que el bienestar emocional es fundamental para una vida plena y ofrecemos 
+            servicios de terapia psicológica para niños, jóvenes y adultos. 
+            No tienes que enfrentar tus desafíos solo; estamos aquí para acompañarte.
+        </p>
+
+        <section class="servicios-grid">
+            <div class="servicio-item" id="psicologia-infantil">
+                <h3 class="titulo-servicio">PSICOLOGÍA INFANTIL</h3>
+                <img src="Psicoloinfantil.jpeg" alt="Psicología Infantil" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Ofrecemos terapia individual para niños que enfrentan desafíos emocionales, conductuales o de aprendizaje.</p>
+                    <p><strong>Costo:</strong> $40 por sesión.</p>
+                </div>
+            </div>
+
+            <div class="servicio-item" id="terapia-lenguaje">
+                <h3 class="titulo-servicio">TERAPIA DE LENGUAJE</h3>
+                <img src="terapilengua.png" alt="Terapia de Lenguaje" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Ayudamos a los niños a superar dificultades en el habla y el lenguaje para una mejor comunicación.</p>
+                    <p><strong>Costo:</strong> $45 por sesión.</p>
+                </div>
+            </div>
+
+            <div class="servicio-item" id="terapia-familiar">
+                <h3 class="titulo-servicio">TERAPIA FAMILIAR</h3>
+                <img src="terapia familiar.png" alt="Terapia Familiar" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Espacio para que las familias resuelvan conflictos y fortalezcan sus lazos, mejorando la convivencia.</p>
+                    <p><strong>Costo:</strong> $60 por sesión.</p>
+                </div>
+            </div>
+
+            <div class="servicio-item" id="nineras-domicilio">
+                <h3 class="titulo-servicio">SERVICIO DE NIÑERAS A DOMICILIO</h3>
+                <img src="niñeras.png" alt="Niñeras a domicilio" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Cuidado profesional y seguro para tus hijos en la comodidad de tu hogar.</p>
+                    <p><strong>Costo:</strong> $15 por hora.</p>
+                </div>
+            </div>
+
+            <div class="servicio-item" id="psicoterapia-individual">
+                <h3 class="titulo-servicio">PSICOTERAPIA INDIVIDUAL</h3>
+                <img src="individual.png" alt="psicoterapia individual" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Cuidado profesional y seguro para tus hijos en la comodidad de tu hogar.</p>
+                    <p><strong>Costo:</strong> $15 por hora.</p>
+                </div>
+            </div>
+
+            <div class="servicio-item" id="talleres">
+                <h3 class="titulo-servicio">TALLERES</h3>
+                <img src="talleres.png" alt="talleres" class="imagen-servicio">
+                <div class="descripcion-servicio">
+                    <p><strong>Descripción:</strong> Cuidado profesional y seguro para tus hijos en la comodidad de tu hogar.</p>
+                    <p><strong>Costo:</strong> $40 por hora.</p>
+                </div>
+            </div>
+        </section>
+
+        <p class="cita">
+            Ofrecemos un enfoque integral para ayudarte a ti y a tu familia.
+            <strong>¡Agenda tu cita hoy mismo!</strong>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const servicios = document.querySelectorAll('.servicio-item');
+
+            servicios.forEach(function(servicio) {
+                servicio.addEventListener('click', function() {
+                    const descripcion = servicio.querySelector('.descripcion-servicio');
+                    
+                    // Alterna la clase 'visible' en la descripción
+                    descripcion.classList.toggle('visible');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
